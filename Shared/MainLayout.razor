@@ -1,0 +1,67 @@
+﻿@inherits LayoutComponentBase
+
+<div style="width: 100%; height: 100vh; background: #eee;">
+    <div class="navigation" style="z-index: 999;">
+        <RadzenMenu Style="display: flex; justify-content: space-between; width: 100%; padding: 0 12px; align-items: center; z-index: 999;">
+            <div style="display: flex; align-items: center;">
+                <div style="margin-right: 16px;">
+                    <h1 style="font-size: 18px; font-weight: bold; margin-top: 12px; color: gray; cursor: pointer;">TRACKIT</h1>
+                </div>
+                
+                <RadzenMenuItem Text="Ferramentas" Icon="build" Style="z-index: 999;">
+                    <RadzenMenuItem Text="Mapa">
+                        <RadzenMenuItem Text="Editor de mapa"></RadzenMenuItem>
+                        <RadzenMenuItem Text="Mapa"></RadzenMenuItem>
+                        <RadzenMenuItem Text="Mapa Histórico"></RadzenMenuItem>
+                    </RadzenMenuItem>
+                    
+                    <RadzenMenuItem Text="Equipamento">
+                        <RadzenMenuItem Text="Linha do Tempo"></RadzenMenuItem>
+                        <RadzenMenuItem Text="Monitor"></RadzenMenuItem>
+                    </RadzenMenuItem>
+                </RadzenMenuItem>
+        
+                <RadzenMenuItem Text="Cadastro" Icon="create" Style="z-index: 999;">
+                    <RadzenMenuItem Text="Equipamento">
+                        <RadzenMenuItem Text="Alarme"></RadzenMenuItem>
+                    </RadzenMenuItem>
+                </RadzenMenuItem>
+        
+                <RadzenMenuItem Text="Relatórios" Icon="description" Style="z-index: 999;">
+                    <RadzenMenuItem Text="Operação">
+                        <RadzenMenuItem Text="Equipamento">
+                            <RadzenMenuItem Text="Conferência de Alocação"></RadzenMenuItem>
+                        </RadzenMenuItem>
+                    </RadzenMenuItem>
+                    
+                    <RadzenMenuItem Text="Equipamento">
+                        <RadzenMenuItem Text="Horímetro"></RadzenMenuItem>
+                    </RadzenMenuItem>
+                </RadzenMenuItem>
+        
+                <RadzenMenuItem Text="Admin" Icon="admin_panel_settings" Style="z-index: 999;">
+                </RadzenMenuItem>
+            </div>
+            
+            <RadzenAutoComplete Style="width: 100%; margin: 0 16px;"  Placeholder="Pesquisar ..."/>
+        
+            <RadzenProfileMenu Style="max-width: 125px;">
+                <Template>
+                    <RadzenGravatar Email="admin@admin.com"></RadzenGravatar>
+                </Template>
+        
+                <ChildContent>
+                    <RadzenProfileMenuItem Text="Perfil"></RadzenProfileMenuItem>
+                    <RadzenProfileMenuItem Text="Sair"></RadzenProfileMenuItem>
+                </ChildContent>
+            </RadzenProfileMenu>
+        </RadzenMenu>
+    </div>
+    
+    @Body
+</div>
+
+<RadzenDialog/>
+<RadzenNotification/>
+<RadzenContextMenu/>
+<RadzenTooltip/>

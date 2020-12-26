@@ -1,0 +1,31 @@
+﻿@page "/"
+@using GoogleMapsComponents
+@using GoogleMapsComponents.Maps
+
+<GoogleMap Height="620px" @ref="@_map1" Id="map1" Options="@_mapOptions"></GoogleMap>
+
+@code {
+    private GoogleMap _map1;
+    private MapOptions _mapOptions;
+    
+    protected override void OnInitialized()
+    {
+        _mapOptions = new MapOptions()
+        {
+            Zoom = 12,
+            Center = new LatLngLiteral()
+            {
+                Lat = -19.9058896,
+                Lng = -43.9307594
+            },
+            MapTypeId = MapTypeId.Sattellite,
+            KeyboardShortcuts = true,
+            MapTypeControl = true,
+            RotateControl = true,
+            RotateControlOptions = new RotateControlOptions
+            {
+                position = ControlPosition.LeftCenter
+            }
+        };
+    }		
+}
